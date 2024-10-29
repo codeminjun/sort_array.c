@@ -21,4 +21,5 @@ int main(void)
         i++;
         token = strtok(NULL," ");
     }
+    len = i;
 }
