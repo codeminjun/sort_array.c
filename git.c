@@ -10,6 +10,7 @@ int main(void)
     char num[100];
     char *new[100];
     char *token;
+    char *temp;
 
     printf("문자열을 입력하세요: ");
     fgets(num,sizeof(num),stdin);
@@ -22,4 +23,13 @@ int main(void)
         token = strtok(NULL," ");
     }
     len = i;
+    for(i=0;i<len-1;i++)
+        for(j=0;i<len-1-i;j++){
+        
+        if(new[j]>new[j+1]){
+            temp = new[j];
+            new[j] = new[j+1];
+            new[j+1] = temp;
+        }
+    }
 }
